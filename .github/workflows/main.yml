@@ -18,7 +18,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Upload to Release
       if: github.event_name == 'release'
-      uses: thinkverse/upload-to-release@master
+      uses: thinkverse/codecov-test@master
       with:
         args: target/example.jar application/java-archive
       env:
